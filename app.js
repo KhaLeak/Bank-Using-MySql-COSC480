@@ -50,8 +50,8 @@ pSchema
 
 var mysqlConn = mysql.createConnection({
 	host: "localhost",
-	user: "bankmgr",
-	password: "Bank@pass1234",
+	user: "root",
+	password: "12345678",
 	multipleStatements: true
 	
 });
