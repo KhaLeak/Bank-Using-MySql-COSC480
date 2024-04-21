@@ -1,15 +1,8 @@
-# Assignment 3 - Web Security #
-Student: Farid Aalam
-
 
 To run type the following command in a terminal:
-$ nodejs app.js
+$ node app.js
 
 Then type "https://localhost:3000" in your browser's address bar.
-
-A user with two accounts will be added to the database after running createdb.sql
-username is farid
-password is Testpass1234@
 
 Required packages
 Following packages have been used in bank web app for assignment 2:
