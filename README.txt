@@ -1,21 +1,23 @@
+Required packages
+Following packages have been used in bank web app:
+ To install type the following commands into terminal
+	- npm install express
+	- npm install body-parser
+	- npm install express-xml-bodyparser
+	- npm install mongoose
+	- npm install helmet-csp
+	- npm install xss-filters
+	- npm install password-validator
+	- npm install mysql
+	- npm install bcrypt
+	- npm install https
+	- npm install sequalize
+
+Then navigate to createdb.sql file and paste into mysql workbench or any mysql editor
 
 To run type the following command in a terminal:
 $ node app.js
-
 Then type "https://localhost:3000" in your browser's address bar.
-
-Required packages
-Following packages have been used in bank web app for assignment 2:
-	- express
-	- body-parser
-	- express-xml-bodyparser
-	- mongoose
-	- helmet-csp
-	- xss-filters
-	- password-validator
-	- mysql
-	- bcrypt
-	- https
 
 All communication between web app and browser are implemented using XML.
 
@@ -43,6 +45,9 @@ Backend:
 
 In backend Nodejs express is used to handle the requests. all GET requests are handled by sending the requested file. All POST request data are first processed with body-parser and express-XML-bodyparser. 
 Registered users can use /login to sign in. username and password is checked against mysql data base. If credentials are valid, a session will be created and user will be redirected to /profile.
+
+Sequalize:
+Sequelize simplifies the process of working with relational databases in Node.js applications, making database interactions more intuitive and efficient.
 
 Database:
 mysql database is used. Database contains two tables. First one is users that holds user informations. Second one is accounts that holds account informations.

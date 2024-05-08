@@ -4,36 +4,55 @@ imported.src = 'purify.min.js';
 document.head.appendChild(imported);
 
 function register() {
-  	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			var xmlDoc = xhttp.responseXML;
-			var msg = DOMPurify.sanitize(xmlDoc.getElementsByTagName("success")[0].childNodes[0].nodeValue);
-			if (msg == "You are registered,You can login now."){ 
-				var j;
-				for (j=0; j<4; j++){
-					document.getElementsByTagName("input")[j].disabled = true;
-				}
-				document.getElementById("check").innerHTML = msg;
-				document.getElementById("log").innerHTML = '<a href="/login">Login</a>';
-				setTimeout(function(){document.getElementById("aa").click();},3000);
-			} else { 
-				document.getElementById("check").innerHTML = msg;
-    			}
-  		}
-	};
+  var username = document.querySelector('input[name="username"]').value;
+  var password = document.querySelector('input[type="password"]').value;
+  var address1 = document.querySelector('input[name="address1"]').value;
+  var address2 = document.querySelector('input[name="address2"]').value;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          var xmlDoc = xhttp.responseXML;
+          var msg = DOMPurify.sanitize(xmlDoc.getElementsByTagName("success")[0].childNodes[0].nodeValue);
+          if (msg == "You are registered,You can login now.") { 
+              var j;
+              for (j = 0; j < 4; j++) {
+                  document.getElementsByTagName("input")[j].disabled = true;
+              }
+              if (msg == "You are registered,You can login now.") { 
+                // Redirect to login page immediately
+                window.location.href = "/login";
+            }
+                document.getElementById("check").innerHTML = msg;
+              document.getElementById("check").innerHTML = msg;
+              document.getElementById("log").innerHTML = '<a href="/login">Login</a>';
+              setTimeout(function(){document.getElementById("aa").click();}, 3000);
+          } else { 
+              document.getElementById("check").innerHTML = msg;
+          }
+      }
+  };
 
   xhttp.open("POST", "signup", true);
   xhttp.setRequestHeader('Content-Type', 'text/xml');
 
-var form = new FormData(document.getElementById("form1"));
-
-
-  var data = '<?xml version="1.0" encoding="UTF-8"?><user><username>'+ form.get("username") + "</username><password>"+form.get("password") + "</password><address1>"+form.get("address1") +"</address1><address2>"+form.get("address2") + '</address2></user>';
-
+  var data = '<?xml version="1.0" encoding="UTF-8"?><user><username>'+ username + "</username><password>"+ password + "</password><address1>"+ address1 +"</address1><address2>"+ address2 + '</address2></user>';
 
   xhttp.send(data);
 };
+
+
+//   xhttp.open("POST", "signup", true);
+//   xhttp.setRequestHeader('Content-Type', 'text/xml');
+
+// var form = new FormData(document.getElementById("form1"));
+
+
+//   var data = '<?xml version="1.0" encoding="UTF-8"?><user><username>'+ form.get("username") + "</username><password>"+form.get("password") + "</password><address1>"+form.get("address1") +"</address1><address2>"+form.get("address2") + '</address2></user>';
+
+
+//   xhttp.send(data);
+// };
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#clickMe').addEventListener('click',register);

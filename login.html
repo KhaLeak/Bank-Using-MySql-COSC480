@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>Bank log in</title>
@@ -25,4 +25,39 @@
 <script type="text/javascript" src="login.js"></script>
 <script type="text/javascript" src="purify.min.js"></script>		
 </body>
-</html> 
+</html>  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Page</title>
+    <link rel="stylesheet" href="login-styles.css">
+    <link rel="shortcut icon" href="./image/user.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="whole">
+            <div class="title"><span>Login Page</span></div>
+            <form id="form1">
+                <div class="row">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required=""><br/>
+                </div>
+                <div class="row">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required=""><br/>
+                </div>
+                <div class="pass"><a href="./forgot">Forgot Password?</a></div>
+                <div class="row botton">
+                    <input id="clickMe" type="button" value="Login" >
+                </div>
+                <div class="signup_link">Not a Member? <a href="./signup">Signup Now!</a></div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="purify.min.js"></script>	
+</body>
+</html>
