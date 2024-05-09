@@ -12,8 +12,9 @@ Following packages have been used in bank web app:
 	- npm install bcrypt
 	- npm install https
 	- npm install sequalize
+Navigate to app.js line 52 and change sql connections according to your localhost
+Then navigate to createdb.sql file change user and password and paste into mysql workbench or any mysql editor
 
-Then navigate to createdb.sql file and paste into mysql workbench or any mysql editor
 
 To run type the following command in a terminal:
 $ node app.js
