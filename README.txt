@@ -37,8 +37,6 @@ The web app contains four pages.
 
 4- /profile: Shows all accounts that belong to the logged in user. 4 type of actions are possible for the user. add new account, deposit, withdraw and transfer money between a user accounts. When page loads a function in javascript file /profile.js named load() is called. load() connects to web app and asks for user's account info. It will show all accounts and balances in a table. Each of 4 actions in /profile contain two javascript function. the first four are addAcc(), deposit(), withdraw() and transfer(). Running each of these functions add more control to the page. By activating each function a secondary function will be activated. Secondary functions related to each first four are create(), sendmoney(), getmoney() and exchange() respectively. The later four will communicate with web app using XML. All recieved data are sanitize using DOMPurify package.
 
-DOMPurify: all data received from users are checked with DOMPurify before adding to HTML.
-a link to logout is also provided.
 
 Password validation: User passwords are validated to meet OWASP requirments using password-validator package.
 
