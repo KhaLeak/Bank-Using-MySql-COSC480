@@ -1,3 +1,4 @@
+//Profile page function
 "use strict"
 var imported = document.createElement('script');
 imported.src = 'purify.min.js';

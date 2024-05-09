@@ -2,25 +2,23 @@ var express = require("express");
 var cookieParser = require('cookie-parser');
 var app = express();
 
-// Set the cookie parser middleware
+
 app.use(cookieParser());
 
-// The handler for GET /
-// @param req - the request
-// @param res - the response
+
 app.get("/", function (req, res) {
 
-  // Was the cookie set?
+ 
   var cookie = req.cookies.session_id;
   
-  // The page HTML
+  
   var pageHTML = "";  
 
-  // The cookie does not exist! Must be a first-time visitor...
+  // The cookie does not exist!
   if (cookie === undefined)
   {
     
-    // Let's generate a random value for their session
+    // generate a random value for their session
     var randomNumber=Math.random().toString();
     randomNumber=randomNumber.substring(2,randomNumber.length);
 

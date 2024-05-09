@@ -42,18 +42,6 @@ function register() {
 };
 
 
-//   xhttp.open("POST", "signup", true);
-//   xhttp.setRequestHeader('Content-Type', 'text/xml');
-
-// var form = new FormData(document.getElementById("form1"));
-
-
-//   var data = '<?xml version="1.0" encoding="UTF-8"?><user><username>'+ form.get("username") + "</username><password>"+form.get("password") + "</password><address1>"+form.get("address1") +"</address1><address2>"+form.get("address2") + '</address2></user>';
-
-
-//   xhttp.send(data);
-// };
-
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#clickMe').addEventListener('click',register);
   document.querySelector('#password').addEventListener('focus',blk);
