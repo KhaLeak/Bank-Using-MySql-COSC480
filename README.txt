@@ -1,3 +1,7 @@
+Khaliq Keyes 480 Final 
+
+git clone https://github.com/KhaLeak/Bank-Using-MySql-COSC480.git
+
 Required packages
 Following packages have been used in bank web app:
  To install type the following commands into terminal
