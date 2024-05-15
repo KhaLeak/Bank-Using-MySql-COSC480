@@ -20,7 +20,6 @@ To run type the following command in a terminal:
 $ node app.js
 Then type "https://localhost:3000" in your browser's address bar.
 
-All communication between web app and browser are implemented using XML.
 
 Frontend:
 The web app contains four pages.
